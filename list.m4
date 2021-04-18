@@ -1,6 +1,10 @@
 changequote(`[', `]')dnl
+define([foo], [[bar]])dnl
+define([bar], [[baz]])dnl
+foo
+bar
 define([last], [ifelse($#, 1, $1, [last(shift($@))])])dnl
-last(foo, bar, baz)
+last(A, B, C)
 define([hoge], [1])dnl
 hoge
 pushdef([hoge], [2])dnl
