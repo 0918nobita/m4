@@ -1,4 +1,4 @@
-changequote(`[', `]')dnl
+changequote([, ])dnl
 define([hoge], [1])dnl
 hoge
 pushdef([hoge], [2])dnl
