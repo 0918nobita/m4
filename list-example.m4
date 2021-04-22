@@ -1,11 +1,10 @@
 include(list.m4)dnl
-first(A, B, C)
+list_first(A, B, C)
 dnl => A
-last(A, B, C)
+list_last(A, B, C)
 dnl => C
-reverse(A, B, C)
+list_reverse(A, B, C)
 dnl => C, B, A
-map_add3(1, 2, 3)
-dnl => 4, 5, 6
-map([add3], [1, 2, 3])
+define([add3], [eval($1 + 3)])dnl
+list_map([add3], [1, 2, 3])
 dnl => 4, 5, 6
