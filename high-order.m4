@@ -1,4 +1,4 @@
-changequote([, ])dnl
+include(syntax.m4)dnl
 dnl (マクロ呼び出しが2回発生するようにネストさせる)
 define([twice], [[$1($1($2))]])dnl
 define([add3], [eval($1 + 3)])dnl

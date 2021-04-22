@@ -1,4 +1,4 @@
-changequote([, ])dnl
+include(syntax.m4)dnl
 define([length], [$#])dnl
 define([first], [$1])dnl
 first(A, B, C)
