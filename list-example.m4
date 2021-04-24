@@ -1,5 +1,5 @@
 include(list.m4)dnl
-first(A, B, C)
+fst(A, B, C)
 dnl => A
 last(A, B, C)
 dnl => C
