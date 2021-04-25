@@ -1,9 +1,16 @@
 include(list.m4)dnl
-fst(A, B, C)
+define([list_a], [A, B, C])dnl
+fst(list_a)
 dnl => A
-last(A, B, C)
+last(list_a)
 dnl => C
-reverse(A, B, C)
+nth(1, [list_a])
+dnl => A
+nth(2, [list_a])
+dnl => B
+nth(3, [list_a])
+dnl => C
+reverse(list_a)
 dnl => C, B, A
 define([add3], [eval($1 + 3)])dnl
 map([add3], [1, 2, 3])

@@ -9,6 +9,8 @@ define([last],
     $#, 1,
     $1,
     [last(shift($@))])])dnl
+define([nth],
+  [pushdef([_nth], [$$1])_nth($2)[]popdef([_nth])])dnl
 define([reverse],
   [ifelse(
     $#, 1,
