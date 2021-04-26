@@ -1,5 +1,8 @@
 include(syntax.m4)dnl
 define([add], [eval(patsubst([$@], [,], +))])dnl
 define([sub], [eval(patsubst([$@], [,], -))])dnl
-add(2, 3, 4)
-sub(10, 1, 2)
+define([fact],
+  [ifelse(
+    eval($1 <= 1), 1,
+    1,
+    [eval($1 * fact(eval($1 - 1)))])])dnl

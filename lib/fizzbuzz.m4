@@ -5,4 +5,4 @@ define([fizzbuzz_mapper],
     eval($1 % 5),  0, $1 <- Buzz,
     eval($1 % 3),  0, $1 <- Fizz,
                       $1)])dnl
-print_list(map([fizzbuzz_mapper], [range(1, 30)]))
+define([fizzbuzz], [print_list(map([fizzbuzz_mapper], [range($1, $2)]))])dnl
