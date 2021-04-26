@@ -1,4 +1,4 @@
-include(syntax.m4)dnl
+include(base.m4)dnl
 define([add], [eval(patsubst([$@], [,], +))])dnl
 define([sub], [eval(patsubst([$@], [,], -))])dnl
 define([fact],

@@ -1,4 +1,4 @@
-include(syntax.m4)dnl
+include(base.m4)dnl
 divert(1)dnl
 a divnum
 foo
