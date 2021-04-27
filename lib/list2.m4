@@ -21,18 +21,16 @@ define([nth],
       [pushdef([_nth], [$$1])_nth($2)[]popdef([_nth])],
     [failwith([nth: invalid index])])])dnl
 define([tail],
-  [pushdef([_length], length($@))dnl
+  [pushdef([_length], length($@))[]dnl
 []ifelse(
     _length, 0,
       [failwith([tail: list is empty])],
     _length, 1,
       [empty],
-    [shift($@)])[]popdef([_length])])dnl
-dnl define([print_list],
-dnl   [ifelse(
-dnl     [$@], [[empty]],
-dnl       [],
-dnl     eval($# > 1), 1,
-dnl       [$1
-dnl print_list(shift($@))],
-dnl     [$1])])dnl
+    [pushdef([_tail], [shift($@)])[]dnl
+[][]ifelse(
+      length(_tail), 0,
+      [[[empty]]],
+      [_tail])[]dnl
+[][]popdef([_tail])])[]dnl
+[]popdef([_length])])dnl
