@@ -38,3 +38,10 @@ define([reverse],
     $#, 1,
     [[$1]],
     [reverse(tail($@)), [$1]])])dnl
+define([map],
+  [ifelse(
+    length($2), 0,
+      [[empty]],
+    length($2), 1,
+    [strict_indir([$1], fst($2))],
+    [strict_indir([$1], fst($2)), map([$1], [tail($2)])])])dnl
