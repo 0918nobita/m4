@@ -1,4 +1,3 @@
-include(base.m4)dnl
 define([fst],
   [ifelse(
     [$@], [[empty]],

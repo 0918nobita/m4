@@ -1,4 +1,3 @@
-include(base.m4)dnl
 dnl (マクロ呼び出しが2回発生するようにネストさせる)
 define([twice], [indir([$1], indir([$1], $2))])dnl
 define([add3], [eval($1 + 3)])dnl
