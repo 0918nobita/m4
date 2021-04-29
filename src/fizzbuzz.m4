@@ -1,4 +1,4 @@
-include(list.m4)dnl
+include([list.m4])dnl
 define([fizzbuzz_mapper],
   [ifelse(
     eval($1 % 15), 0, $1 <- FizzBuzz,
@@ -6,7 +6,6 @@ define([fizzbuzz_mapper],
     eval($1 % 3),  0, $1 <- Fizz,
                       $1)])dnl
 define([fizzbuzz],
-  [print_list(
-    map(
-      [fizzbuzz_mapper],
-      [range($1, $2)]))])dnl
+  [map(
+    [fizzbuzz_mapper],
+    [range($1, $2)])])dnl
