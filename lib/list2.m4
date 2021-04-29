@@ -45,3 +45,11 @@ define([map],
     length($2), 1,
     [indir([$1], fst($2))],
     [indir([$1], fst($2)), map([$1], [tail($2)])])])dnl
+define([range],
+  [ifelse(
+    assert_numeric($1)$1, assert_numeric($2)$2,
+    $1,
+    [ifelse(
+      eval($1 < $2), 1,
+      $1[, ][range(]incr($1)[, ]$2[)],
+      [empty])])])dnl
