@@ -1,3 +1,4 @@
+include(`base.m4')dnl
 define([print_list], [ifelse(eval($# > 1), 1, $1
 [print_list(shift($@))], $1)])dnl
 define([length],

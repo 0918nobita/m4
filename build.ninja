@@ -1,6 +1,0 @@
-rule frozen
-    command = m4 -F $out $in
-
-build lib/base.m4f: frozen lib/base.m4
-
-default lib/base.m4f

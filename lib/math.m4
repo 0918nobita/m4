@@ -1,3 +1,4 @@
+include(`base.m4')dnl
 define([add], [eval(patsubst([$@], [,], +))])dnl
 define([sub], [eval(patsubst([$@], [,], -))])dnl
 define([fact],
