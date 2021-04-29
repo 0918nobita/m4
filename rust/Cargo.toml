@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "m4builder",
+    "m4rs"
+]
