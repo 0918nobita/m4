@@ -1,0 +1,4 @@
+#!/bin/bash -eu
+base=$(cd $(dirname $0) && pwd)
+src=$base/../src 
+m4 -daeq -E -E -I $src $src/base.m4 $src/fizzbuzz.m4 -
