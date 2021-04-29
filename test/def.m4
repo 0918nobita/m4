@@ -1,4 +1,3 @@
-include(`base.m4')dnl
 define([hoge], [1])dnl
 hoge
 pushdef([hoge], [2])dnl

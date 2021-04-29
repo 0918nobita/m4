@@ -1,4 +1,4 @@
-include(`list.m4')dnl
+include(list.m4)dnl
 define([fizzbuzz_mapper],
   [ifelse(
     eval($1 % 15), 0, $1 <- FizzBuzz,

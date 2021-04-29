@@ -1,4 +1,4 @@
-include(`list.m4')dnl
+include(list.m4)dnl
 length(empty)
 dnl => 0
 length()
