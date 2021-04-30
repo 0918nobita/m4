@@ -1,2 +1,2 @@
 namespace([hoge],
-  [define(ns([add3]), [eval($1 + 3)])])dnl
+  [define([self::add3], [eval($1 + 3)])])dnl
