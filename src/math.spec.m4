@@ -1,4 +1,3 @@
-include([testing.m4])dnl
 include([math.m4])dnl
 assert([add], math_add(2, 3, 4),  9)dnl
 assert([sub], math_sub(10, 1, 2), 7)dnl

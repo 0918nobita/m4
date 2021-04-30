@@ -1,4 +1,3 @@
-include([testing.m4])dnl
 include([high_order.m4])dnl
 define([add3], [eval($1 + 3)])dnl
 define([add6], [twice([add3], $1)])dnl

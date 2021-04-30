@@ -1,4 +1,3 @@
-include([testing.m4])dnl
 include([fizzbuzz.m4])dnl
 assert([FizzBuzz],
   quote(fizzbuzz(1, 15)),

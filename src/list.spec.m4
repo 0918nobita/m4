@@ -1,4 +1,3 @@
-include([testing.m4])dnl
 include([list.m4])dnl
 assert([length of `empty` is to be 0],
   list_length(empty), 0)dnl
