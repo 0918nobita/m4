@@ -6,6 +6,6 @@ define([fizzbuzz_mapper],
     eval($1 % 3),  0, $1 <- Fizz,
                       $1)])dnl
 define([fizzbuzz],
-  [map(
+  [list_map(
     [fizzbuzz_mapper],
-    [range($1, $2)])])dnl
+    [list_range($1, $2)])])dnl
