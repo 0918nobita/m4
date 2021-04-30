@@ -54,7 +54,7 @@ define([map],
     length($2), 0,
       [[empty]],
     length($2), 1,
-    [indir([$1], fst($2))],
+      [indir([$1], fst($2))],
     [indir([$1], fst($2)), map([$1], [tail($2)])])])dnl
 define([range],
   [ifelse(
