@@ -59,11 +59,13 @@ dnl
       [self::last(self::tail($@))])[]dnl
 [][]popdef([_length])])dnl
 dnl
-[]define([self::reverse],
+[]define([self::add], [ifelse([$2], [empty], [$1], [$2, $1])])dnl
+dnl
+[]define([self::rev],
     [ifelse(
       $#, 1,
       [[$1]],
-      [self::reverse(self::tail($@)), [$1]])])dnl
+      [self::rev(self::tail($@)), [$1]])])dnl
 dnl
 []define([self::map],
     [ifelse(

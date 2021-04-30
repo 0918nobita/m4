@@ -23,7 +23,7 @@ assert([nth(1, _)], list_nth(1, [A, B, C]), [A])dnl
 assert([nth(2, _)], list_nth(2, [A, B, C]), [B])dnl
 assert([nth(3, _)], list_nth(3, [A, B, C]), [C])dnl
 assert([last], list_last(A, B, C), [C])dnl
-assert([reverse], quote(list_reverse(A, B, C)), [[C,B,A]])dnl
+assert([reverse], quote(list_rev(A, B, C)), [[C,B,A]])dnl
 define([add3], [eval($1 + 3)])dnl
 assert([map], quote(list_map([add3], [1, 2, 3])), [[4,5,6]])dnl
 assert([range], quote(list_range(1, 3)), [[1,2,3]])dnl
